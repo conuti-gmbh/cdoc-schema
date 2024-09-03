@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/2020-12/schema#",
+  "$id": "Message.schema.json",
+  "type": "object",
+  "properties": {
+    "processes": {
+      "type": "array",
+      "items": {
+        "$ref": "Process.schema.json"
+      }
+    }
+  }
+}

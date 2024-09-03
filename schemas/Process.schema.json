@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/2020-12/schema#",
+  "$id": "Process.schema.json",
+  "type": "object",
+  "properties": {
+    "businessKey": {
+      "type": "string"
+    },
+    "dataSource": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "edifactVersion": {
+      "type": "integer"
+    },
+    "data": {
+      "$ref": "ProcessData.schema.json"
+    },
+    "processDate": {
+      "type": "integer",
+      "format": "date-time"
+    }
+  }
+}

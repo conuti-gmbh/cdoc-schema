@@ -1,0 +1,302 @@
+{
+  "$schema": "http://json-schema.org/2020-12/schema#",
+  "$id": "Transaktionsdaten.schema.json",
+  "type": "object",
+  "properties": {
+    "datenaustauschreferenz": {
+      "type": "string"
+    },
+    "sparte": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/enum/Sparte.schema.json"
+    },
+    "transaktionsgrund": {
+      "type": "string"
+    },
+    "transaktionsgrundergaenzung": {
+      "type": "string"
+    },
+    "transaktionsgrundergaenzungBefristeteAnmeldung": {
+      "type": "string"
+    },
+    "lieferrichtung": {
+      "type": "string"
+    },
+    "prozessdatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "vorgangsnummer": {
+      "type": "string"
+    },
+    "pruefidentifikator": {
+      "type": "string"
+    },
+    "absender": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Marktteilnehmer.schema.json"
+    },
+    "empfaenger": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Marktteilnehmer.schema.json"
+    },
+    "dokumentennummer": {
+      "type": "string"
+    },
+    "dokumentenname": {
+      "type": "string"
+    },
+    "kategorie": {
+      "type": "string"
+    },
+    "nachrichtenfunktion": {
+      "type": "string"
+    },
+    "nachrichtendatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "nachrichtenreferenznummer": {
+      "type": "string"
+    },
+    "anfragereferenznummer": {
+      "type": "string"
+    },
+    "vorgangsreferenznummer": {
+      "type": "string"
+    },
+    "sendungsposition": {
+      "type": "string"
+    },
+    "positionsnummer": {
+      "type": "integer"
+    },
+    "mitteilungsnummer": {
+      "type": "string"
+    },
+    "netznutzungsabrechnungsintervall": {
+      "type": "string"
+    },
+    "typ": {
+      "type": "string"
+    },
+    "anfrageReferenz": {
+      "type": "string"
+    },
+    "auftragsReferenz": {
+      "type": "string"
+    },
+    "vertragsbeginn": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "vertragsende": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ausfuehrungsdatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lieferdatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "meldepunkt": {
+      "type": "string"
+    },
+    "startdatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "enddatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verwendungAb": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verwendungBis": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "leistungsperiode": {
+      "type": "string"
+    },
+    "abonnement": {
+      "type": "string"
+    },
+    "produktbeschreibung": {
+      "type": "string"
+    },
+    "bestellungzaehlzeiten": {
+      "type": "string"
+    },
+    "angebotsnummer": {
+      "type": "string"
+    },
+    "angebotsreferenz": {
+      "type": "string"
+    },
+    "naechsteNetznutzungsabrechnung": {
+      "type": "string"
+    },
+    "naechsteTurnusAblesungStrom": {
+      "type": "string"
+    },
+    "naechsteTurnusAblesungGas": {
+      "type": "string"
+    },
+    "identifikationslogik": {
+      "type": "string"
+    },
+    "datumsformat": {
+      "type": "string"
+    },
+    "antwortstatus": {
+      "type": "string"
+    },
+    "antwortstatusCodeliste": {
+      "type": "string"
+    },
+    "antwortstatusdritter": {
+      "type": "string"
+    },
+    "antwortstatusCodelistedritter": {
+      "type": "string"
+    },
+    "beteiligterMarktpartner": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Marktteilnehmer.schema.json"
+    },
+    "beteiligterMarktpartnerReferenz": {
+      "type": "string"
+    },
+    "beteiligterMarktpartnerReferenzcode": {
+      "type": "string"
+    },
+    "freitext": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/Freitext.schema.json"
+    },
+    "fehlerbeschreibung": {
+      "type": "string"
+    },
+    "begruendung": {
+      "type": "string"
+    },
+    "infoAbweichung": {
+      "type": "string"
+    },
+    "ergaenzteMarktlokation": {
+      "type": "boolean"
+    },
+    "zaehlerstandsinfo": {
+      "type": "boolean"
+    },
+    "lokationsId": {
+      "type": "string"
+    },
+    "referenzMalo": {
+      "type": "string"
+    },
+    "referenzMelo": {
+      "type": "string"
+    },
+    "referenzPreisschluesselstamm": {
+      "type": "string"
+    },
+    "datumleistungsbeginn": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endezumtermin": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "naechsteBearbeitung": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lieferbeginndatuminbearbeitung": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "angebotsart": {
+      "type": "string"
+    },
+    "menge": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/Menge.schema.json"
+    },
+    "tarifstufe": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/enum/Tarifstufe.schema.json"
+    },
+    "bilanzkreiszuordnung": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/enum/Bilanzkreiszuordnung.schema.json"
+    },
+    "anwendungsreferenznummer": {
+      "type": "string"
+    },
+    "fertigstellungsdatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datumuebergabe": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "gueltigAb": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ablesedatum": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "verarbeitungsReihenfolge": {
+      "type": "string"
+    },
+    "ansprechpartnerKunde": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Ansprechpartner.schema.json"
+    },
+    "statusVeraenderungsZeitpunkt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "gueltigkeitsZeitspanne": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "nachrichtenReferenzBestellbestaetigung": {
+      "type": "string"
+    },
+    "vorgangsReferenzBestellbestaetigung": {
+      "type": "string"
+    },
+    "datumKuendigungKd": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "datumKuendigungLf": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "referenzArtikelID": {
+      "type": "string"
+    },
+    "bilanzkreis": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Bilanzkreis.schema.json"
+      }
+    },
+    "geplantesProduktpaket": {
+      "type": "integer"
+    },
+    "abtretungserklaerung": {
+      "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/Abtretungserklaerung.schema.json"
+    },
+    "antwortStatusZeitraum": {
+      "type": "array",
+      "items": {
+        "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/AntwortStatusZeitraum.schema.json"
+      }
+    }
+  }
+}

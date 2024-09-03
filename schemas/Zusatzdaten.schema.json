@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/2020-12/schema#",
+  "$id": "Zusatzdaten.schema.json",
+  "type": "object",
+  "properties": {
+    "zuordnungsermaechtigung": {
+      "type": "boolean"
+    },
+    "anzahlMalo4": {
+      "type": "boolean"
+    },
+    "anzahlMalo6": {
+      "type": "boolean"
+    },
+    "betriebszustand": {
+      "type": "string"
+    },
+    "gMSBCode": {
+      "type": "string"
+    }
+  }
+}

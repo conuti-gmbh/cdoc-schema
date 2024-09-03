@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/2020-12/schema#",
+  "$id": "ProcessData.schema.json",
+  "type": "object",
+  "properties": {
+    "stammdaten": {
+      "$ref": "Stammdaten.schema.json"
+    },
+    "transaktionsdaten": {
+      "$ref": "Transaktionsdaten.schema.json"
+    },
+    "zusatzdaten": {
+      "$ref": "Zusatzdaten.schema.json"
+    }
+  }
+}
