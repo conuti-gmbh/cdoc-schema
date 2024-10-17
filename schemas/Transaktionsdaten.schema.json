@@ -28,6 +28,9 @@
     "vorgangsnummer": {
       "type": "string"
     },
+    "idempodenzschluessel": {
+      "type": "string"
+    },
     "pruefidentifikator": {
       "type": "string"
     },
