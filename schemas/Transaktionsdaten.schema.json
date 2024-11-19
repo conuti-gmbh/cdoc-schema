@@ -163,7 +163,13 @@
     "antwortstatusdritter": {
       "type": "string"
     },
-    "antwortstatusCodelistedritter": {
+    "antwortstatusdritterBetroffeneLokation": {
+      "type": "string"
+    },
+    "antwortstatusdritterCodeliste": {
+      "type": "string"
+    },
+    "antwortstatusdritterReferenz": {
       "type": "string"
     },
     "beteiligterMarktpartner": {
