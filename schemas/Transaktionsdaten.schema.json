@@ -306,6 +306,12 @@
       "items": {
         "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/AntwortStatusZeitraum.schema.json"
       }
+    },
+    "apiPath": {
+      "type": "string"
+    },
+    "apiKennung": {
+      "type": "string"
     }
   }
 }
