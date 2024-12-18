@@ -312,6 +312,10 @@
     },
     "apiKennung": {
       "type": "string"
+    },
+    "annahmedatum": {
+      "type": "string",
+      "format": "date-time"
     }
   }
 }
