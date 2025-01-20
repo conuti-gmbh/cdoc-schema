@@ -3,317 +3,414 @@
   "$id": "Transaktionsdaten.schema.json",
   "type": "object",
   "properties": {
-    "datenaustauschreferenz": {
+    "datenaustauschreferenz": { 
+      "description": "Enthält die eindeutige Datenaustauschreferenz der Nachricht, die in der EDIFact Kommunikation verwendet wird",
       "type": "string"
     },
-    "sparte": {
+    "sparte": { 
+      "description": "Enthält Informationen über die Sparte",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/enum/Sparte.schema.json"
     },
-    "transaktionsgrund": {
+    "transaktionsgrund": { 
+      "description": "Der Transaktionsgrund beschreibt den Geschäftsvorfall zur Kategorie genauer / UTILMD STS+7++###+ZW4+E03",
       "type": "string"
     },
-    "transaktionsgrundergaenzung": {
+    "transaktionsgrundergaenzung": { 
+      "description": "Ergänzung zum Transaktionsgrund / UTILMD STS+7++E01+###+E03",
       "type": "string"
     },
-    "transaktionsgrundergaenzungBefristeteAnmeldung": {
+    "transaktionsgrundergaenzungBefristeteAnmeldung": { 
+      "description": "Ergänzung zum Transaktionsgrund bei befristeten An-/Abmeldungen / UTILMD STS+7++E01+ZW4+###",
       "type": "string"
     },
-    "lieferrichtung": {
+    "lieferrichtung": { 
+      "description": "Gibt an, ob es Erzeugung oder Verbrauch ist / UTILMD CCI+Z30 / ORDERS IMD++Z14",
       "type": "string"
     },
-    "prozessdatum": {
+    "prozessdatum": { 
+      "description": "Wird intern erzeugt - OBSOLET",
       "type": "string",
       "format": "date-time"
     },
-    "vorgangsnummer": {
+    "vorgangsnummer": { 
+      "description": "Nummer des Vorgangs / UTILMD UTILTS IDE+24 / INSRPT INVOIC DOC",
       "type": "string"
     },
-    "idempodenzschluessel": {
+    "idempodenzschluessel": { 
+      "description": "Imempodenzschlüssel des Requests",
       "type": "string"
     },
-    "pruefidentifikator": {
+    "pruefidentifikator": { 
+      "description": "Enthält den Prüfidentifikator aus der EDIFact Kommunikation / RFF+Z13",
       "type": "string"
     },
-    "absender": {
+    "absender": { 
+      "description": "Marktteilnehmer, der die Nachricht verschickt hat / NAD+MS",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Marktteilnehmer.schema.json"
     },
-    "empfaenger": {
+    "empfaenger": { 
+      "description": "Marktteilnehmer, der die Nachricht empfangen hat / NAD+MR",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Marktteilnehmer.schema.json"
     },
-    "dokumentennummer": {
+    "dokumentennummer": { 
+      "description": "EDIFact Referenz aus dem BGM Segment / BGM",
       "type": "string"
     },
-    "dokumentenname": {
+    "dokumentenname": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "kategorie": {
+    "kategorie": { 
+      "description": "Qualifier aus dem Beginn der EDIFact Nachricht / BGM",
       "type": "string"
     },
-    "nachrichtenfunktion": {
+    "nachrichtenfunktion": { 
+      "description": "Nachrichtenfunktionskennzeichen / BGM",
       "type": "string"
     },
-    "nachrichtendatum": {
+    "nachrichtendatum": { 
+      "description": "Erstellungdatum der EDIFact / DTM+137",
       "type": "string",
       "format": "date-time"
     },
-    "nachrichtenreferenznummer": {
+    "nachrichtenreferenznummer": { 
+      "description": "EDIFact Referenz aus dem UNT Segment / UTILMD UNT+21",
       "type": "string"
     },
-    "anfragereferenznummer": {
+    "anfragereferenznummer": { 
+      "description": "Referenz Vorgangsnummer 'aus Anfragenachricht' / ORDERS RFF+TN / IFTSTA RFF+AAV / INSRPT RFF+TN RFF+AAV",
       "type": "string"
     },
-    "vorgangsreferenznummer": {
+    "vorgangsreferenznummer": { 
+      "description": "Referenznummer des Vorgangs der Anmeldung nach WiM / ORDERS RFF+Z41 / IFTSTA RFF+ACW",
       "type": "string"
     },
-    "sendungsposition": {
+    "sendungsposition": { 
+      "description": "Sendungsposition / GID",
       "type": "string"
     },
-    "positionsnummer": {
+    "positionsnummer": { 
+      "description": "Positionsnummer / LIN",
       "type": "integer"
     },
-    "mitteilungsnummer": {
+    "mitteilungsnummer": { 
+      "description": "Referenz Vorgangsnummer / RFF+ADY",
       "type": "string"
     },
-    "netznutzungsabrechnungsintervall": {
+    "netznutzungsabrechnungsintervall": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "typ": {
+    "typ": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "anfrageReferenz": {
+    "anfrageReferenz": { 
+      "description": "Beantragungsnummer / RFF+AGI",
       "type": "string"
     },
-    "auftragsReferenz": {
+    "auftragsReferenz": { 
+      "description": "Auftragsnummer 'Einkauf' / RFF+ON",
       "type": "string"
     },
-    "vertragsbeginn": {
+    "vertragsbeginn": { 
+      "description": "Datum Vertragsbeginn / DTM+92",
       "type": "string",
       "format": "date-time"
     },
-    "vertragsende": {
+    "vertragsende": { 
+      "description": "Datum Vertragsende / DTM+93",
       "type": "string",
       "format": "date-time"
     },
-    "ausfuehrungsdatum": {
+    "ausfuehrungsdatum": { 
+      "description": "Ausführungsdatum/-zeit / DTM+203 DTM+469",
       "type": "string",
       "format": "date-time"
     },
-    "lieferdatum": {
+    "lieferdatum": { 
+      "description": "Lieferdatum DTM+76",
       "type": "string",
       "format": "date-time"
     },
-    "meldepunkt": {
+    "meldepunkt": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "startdatum": {
+    "startdatum": { 
+      "description": "Startdatum oder -zeitpunkt, frühestes/r / DTM+469",
       "type": "string",
       "format": "date-time"
     },
-    "enddatum": {
+    "enddatum": { 
+      "description": "Endedatum oder -zeitpunkt, spätestes/r / DTM+472",
       "type": "string",
       "format": "date-time"
     },
-    "verwendungAb": {
+    "verwendungAb": { 
+      "description": "Verarbeitung, Beginndatum/-zeit / DTM+163",
       "type": "string",
       "format": "date-time"
     },
-    "verwendungBis": {
+    "verwendungBis": { 
+      "description": "Verarbeitung, Endedatum/-zeit / DTM+164",
       "type": "string",
       "format": "date-time"
     },
-    "leistungsperiode": {
+    "leistungsperiode": { 
+      "description": "Leistungsperiode / DTM+306",
       "type": "string"
     },
-    "abonnement": {
+    "abonnement": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "produktbeschreibung": {
+    "produktbeschreibung": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "bestellungzaehlzeiten": {
+    "bestellungzaehlzeiten": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "angebotsnummer": {
+    "angebotsnummer": { 
+      "description": "Angebotsnummer / RFF+AAG",
       "type": "string"
     },
-    "angebotsreferenz": {
+    "angebotsreferenz": { 
+      "description": "Referenznummer einer vorangegangenen Nachricht / ORDERS RFF+ACW",
       "type": "string"
     },
-    "naechsteNetznutzungsabrechnung": {
+    "naechsteNetznutzungsabrechnung": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "naechsteTurnusAblesungStrom": {
+    "naechsteTurnusAblesungStrom": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "naechsteTurnusAblesungGas": {
+    "naechsteTurnusAblesungGas": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "identifikationslogik": {
+    "identifikationslogik": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "datumsformat": {
+    "datumsformat": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "antwortstatus": {
+    "antwortstatus": { 
+      "description": "Antwortstatus / STS+E01",
       "type": "string"
     },
-    "antwortstatusCodeliste": {
+    "antwortstatusCodeliste": { 
+      "description": "Antwortstatus Codeliste / STS+E01",
       "type": "string"
     },
-    "antwortstatusdritter": {
+    "antwortstatusdritter": { 
+      "description": "Antwortstatus / STS+Z35",
       "type": "string"
     },
-    "antwortstatusdritterBetroffeneLokation": {
+    "antwortstatusdritterBetroffeneLokation": { 
+      "description": "Antwortstatus Lokation / STS+Z35",
       "type": "string"
     },
-    "antwortstatusdritterCodeliste": {
+    "antwortstatusdritterCodeliste": { 
+      "description": "Antwortstatus Codeliste / STS+Z35",
       "type": "string"
     },
-    "antwortstatusdritterReferenz": {
+    "antwortstatusdritterReferenz": { 
+      "description": "Antwortstatus Referenz / STS+Z35",
       "type": "string"
     },
-    "beteiligterMarktpartner": {
+    "beteiligterMarktpartner": { 
+      "description": "MP-ID des beteiligten Marktteilnehmers / ORDERS NAD+VY NAD+DDM / APERAK RFF+Z08",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Marktteilnehmer.schema.json"
     },
-    "beteiligterMarktpartnerReferenz": {
+    "beteiligterMarktpartnerReferenz": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "beteiligterMarktpartnerReferenzcode": {
+    "beteiligterMarktpartnerReferenzcode": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "freitext": {
+    "freitext": { 
+      "description": "Freitext / FTX+ACB",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/Freitext.schema.json"
     },
-    "fehlerbeschreibung": {
+    "fehlerbeschreibung": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "begruendung": {
+    "begruendung": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "infoAbweichung": {
+    "infoAbweichung": { 
+      "description": "Freitext Abweichung / FTX+ABO",
       "type": "string"
     },
-    "ergaenzteMarktlokation": {
+    "ergaenzteMarktlokation": { 
+      "description": "Ergänzende Marktlokation im Freitext / FTX+ABO",
       "type": "boolean"
     },
-    "zaehlerstandsinfo": {
+    "zaehlerstandsinfo": { 
+      "description": "Ankündigung, dass per MSCONS noch der Zählerstand übermittelt wird / FTX+ADM",
       "type": "boolean"
     },
-    "lokationsId": {
+    "lokationsId": { 
+      "description": "Referenz auf die Lokation / LOC",
       "type": "string"
     },
-    "referenzMalo": {
+    "referenzMalo": { 
+      "description": "Marktlokation Referenz / RFF+AVE",
       "type": "string"
     },
-    "referenzMelo": {
+    "referenzMelo": { 
+      "description": "Messlokation Referenz / RFF+Z21",
       "type": "string"
     },
-    "referenzPreisschluesselstamm": {
+    "referenzPreisschluesselstamm": { 
+      "description": "Preisschlüsselstamm Referenz / RFF+Z17",
       "type": "string"
     },
-    "datumleistungsbeginn": {
+    "datumleistungsbeginn": { 
+      "description": "Datum zum geplanten Leistungsbeginn / DTM+76",
       "type": "string",
       "format": "date-time"
     },
-    "endezumtermin": {
+    "endezumtermin": { 
+      "description": "Kündigungsdatum / DTM+471",
       "type": "string",
       "format": "date-time"
     },
-    "naechsteBearbeitung": {
+    "naechsteBearbeitung": { 
+      "description": "Datum für nächste Bearbeitung / DTM+Z08",
       "type": "string",
       "format": "date-time"
     },
-    "lieferbeginndatuminbearbeitung": {
+    "lieferbeginndatuminbearbeitung": { 
+      "description": "Lieferbeginndatum in Bearbeitung / DTM+Z07",
       "type": "string",
       "format": "date-time"
     },
-    "angebotsart": {
+    "angebotsart": { 
+      "description": "Alter FW - OBSOLET",
       "type": "string"
     },
-    "menge": {
+    "menge": { 
+      "description": "Menge / QTY",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/Menge.schema.json"
     },
-    "tarifstufe": {
+    "tarifstufe": { 
+      "description": "Tarifstufe / QTY",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/enum/Tarifstufe.schema.json"
     },
-    "bilanzkreiszuordnung": {
+    "bilanzkreiszuordnung": { 
+      "description": "Status der Bilanzkreiszuordnung / STS+Z18",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/enum/Bilanzkreiszuordnung.schema.json"
     },
-    "anwendungsreferenznummer": {
+    "anwendungsreferenznummer": { 
+      "description": "Anwendungsreferenznummer / RFF+AGK",
       "type": "string"
     },
-    "fertigstellungsdatum": {
+    "fertigstellungsdatum": { 
+      "description": "Fertigstellungsdatum / DTM+293",
       "type": "string",
       "format": "date-time"
     },
-    "datumuebergabe": {
+    "datumuebergabe": { 
+      "description": "Datum und Uhrzeit der Übergabe / DTM+294",
       "type": "string",
       "format": "date-time"
     },
-    "gueltigAb": {
+    "gueltigAb": { 
+      "description": "Gültigkeitsdatum/-zeit / DTM+7",
       "type": "string",
       "format": "date-time"
     },
-    "ablesedatum": {
+    "ablesedatum": { 
+      "description": "tatsächliches Ablesedatum / DTM+9",
       "type": "string",
       "format": "date-time"
     },
-    "verarbeitungsReihenfolge": {
+    "verarbeitungsReihenfolge": { 
+      "description": "Alte FW - OBSOLET",
       "type": "string"
     },
-    "ansprechpartnerKunde": {
+    "ansprechpartnerKunde": { 
+      "description": "Kontaktdaten des Kunden / ORDERS CTA+IC",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Ansprechpartner.schema.json"
     },
-    "statusVeraenderungsZeitpunkt": {
+    "statusVeraenderungsZeitpunkt": { 
+      "description": "Statusveränderung, Datum/Zeit / DTM+334",
       "type": "string",
       "format": "date-time"
     },
-    "gueltigkeitsZeitspanne": {
+    "gueltigkeitsZeitspanne": { 
+      "description": "Gültigkeitszeitspanne / DTM+273",
       "type": "string",
       "format": "date-time"
     },
-    "nachrichtenReferenzBestellbestaetigung": {
+    "nachrichtenReferenzBestellbestaetigung": { 
+      "description": "Referenznummer der Nachricht der betroffenen Antwort auf Bestellung 'Bestellbestätigung' / ORDERS RFF+Z42",
       "type": "string"
     },
-    "vorgangsReferenzBestellbestaetigung": {
+    "vorgangsReferenzBestellbestaetigung": { 
+      "description": "Referenznummer des Vorgangs der betroffenen Antwort auf Bestellung 'Bestellbestätigung' / ORDERS RFF+Z43",
       "type": "string"
     },
-    "datumKuendigungKd": {
+    "datumKuendigungKd": { 
+      "description": "Kündigungsdatum, was dem Kunden mitgeteilt worden ist / DTM+Z05",
       "type": "string",
       "format": "date-time"
     },
-    "datumKuendigungLf": {
+    "datumKuendigungLf": { 
+      "description": "Kündigungsdatum, was dem Lieferanten mitgeteilt worden ist / DTM+Z06",
       "type": "string",
       "format": "date-time"
     },
-    "referenzArtikelID": {
+    "referenzArtikelID": { 
+      "description": "Referenz auf die Artikel-ID / IFTSTA RFF+Z45",
       "type": "string"
     },
-    "bilanzkreis": {
+    "bilanzkreis": { 
+      "description": "Angemeldete Bilanzkreise - nur Sparte Gas",
       "type": "array",
-      "items": {
+      "items": { 
+      "description": "",
         "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/bo/Bilanzkreis.schema.json"
       }
     },
-    "geplantesProduktpaket": {
+    "geplantesProduktpaket": { 
+      "description": "Informativ zur Umsetzung geplantes Produktpaket / RFF+Z60",
       "type": "integer"
     },
-    "abtretungserklaerung": {
+    "abtretungserklaerung": { 
+      "description": "Link zur Abtretungserklärung / Vollmacht vom Kunden / ORDERS FTX+Z13",
       "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/Abtretungserklaerung.schema.json"
     },
-    "antwortStatusZeitraum": {
+    "antwortStatusZeitraum": { 
+      "description": "AntwortstatusZeitraumId aus STS Segment",
       "type": "array",
-      "items": {
+      "items": { 
+      "description": "",
         "$ref": "https://raw.githubusercontent.com/conuti-gmbh/bo4e-schema/master/schemas/v1/com/AntwortStatusZeitraum.schema.json"
       }
     },
-    "apiPath": {
+    "apiPath": { 
+      "description": "Internetadresse des API-Webdienstes",
       "type": "string"
     },
-    "apiKennung": {
+    "apiKennung": { 
+      "description": "Identifikator des fachlichen API-Webdienstes",
       "type": "string"
     },
-    "annahmedatum": {
+    "annahmedatum": { 
+      "description": "Annahmedatum eines Dokument / DTM+154",
       "type": "string",
       "format": "date-time"
     }
