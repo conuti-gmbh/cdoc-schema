@@ -4,23 +4,33 @@
   "type": "object",
   "properties": {
     "businessKey": {
-      "type": "string"
+      "type": "string",
+      "description": "BusinessKey"
     },
     "dataSource": {
-      "type": "string"
+      "type": "string",
+      "description": "Datenquelle INBOUND oder OUTBOUND"
     },
     "version": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Versionierung des JSON Schemas"
     },
     "edifactVersion": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Angabe der EDIFACT Formatversion in Format YYYYMM, Beispiel 202504"
     },
     "data": {
       "$ref": "ProcessData.schema.json"
     },
+    "tenantId": {
+      "type": "string",
+      "default": "NONE",
+      "description": "Identifikation des Mandanten, NONE bei System ohne Mandanten"
+    },
     "processDate": {
       "type": "integer",
-      "format": "date-time"
+      "format": "date-time",
+      "description": "Prozessdatum"
     }
   }
 }
