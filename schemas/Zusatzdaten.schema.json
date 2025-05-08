@@ -27,6 +27,10 @@
     },
     "parentBusinessKey": {
       "type": "string"
+    },
+    "ermaechtigungVorhanden": {
+      "description": "Rückmeldung der SST Lesen_Zuordnungsermächtigung mit Information ob Zuordnungsermächtigung vorliegt",
+      "type": "boolean"
     }
   }
 }
