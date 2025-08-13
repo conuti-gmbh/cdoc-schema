@@ -28,7 +28,7 @@
       "description": "Identifikation des Mandanten, NONE bei System ohne Mandanten"
     },
     "processDate": {
-      "type": "integer",
+      "type": "string",
       "format": "date-time",
       "description": "Prozessdatum"
     }
