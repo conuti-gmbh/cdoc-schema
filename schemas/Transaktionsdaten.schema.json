@@ -413,6 +413,10 @@
       "description": "Annahmedatum eines Dokument / DTM+154",
       "type": "string",
       "format": "date-time"
+    },
+    "unbOutboundDatum": {
+      "description": "Datum und Uhrzeit in Format YYMMDDHHmm, zB 2508211435 für 2025-08-21 14:35 Uhr Systemzeit",
+      "type": "string"
     }
   }
 }
