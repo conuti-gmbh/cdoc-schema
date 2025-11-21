@@ -8,8 +8,8 @@
       "description": "BusinessKey"
     },
     "dataSource": {
-      "type": "string",
-      "description": "Datenquelle INBOUND oder OUTBOUND"
+      "$ref": "DataSource.schema.json",
+      "description": "CDOC DataSource"
     },
     "version": {
       "type": "integer",
